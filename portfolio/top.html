@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <meta name="description" content="Portfolio">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Portfolio</title>
+
+        <!--CSS-->
+        <link  rel="stylesheet" href="css/style.css">
+
+
+    </head>
+
+    <body>
+        <header>           
+            <h1>This Is My Portfolio Website.</h1>
+
+<!--list-->
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li>home</li>
+                        <li><a  href="profile.html">profile</a></li>
+                        <li><a href="kunren.html">polytec</a></li>
+                        <li><a href="suiboku.html">interest</a></li>
+                    </ul></nav>
+            </div>
+
+        </header>
+
+        <main>
+                <div class="main-text">
+                    <p class-"main-title">If you can't fly then run, 
+                        if you can't run then walk, <br>
+                        if you can't walk then crawl, but whatever you do, 
+                        you have to keep moving forward.</p>
+                    <h1 class="main-name">Move on</h1>
+                    </p>
+                </div>
+                <video src="images/s1/main.mp4"  autoplay loop muted> 
+        </main>
+        
+        <footer class="top_footer">
+            <p class="copyright"> &copy;hs 2024</p>
+
+        </footer>
+
+<!--
+    JS font-size
+------------------------------------------------------>
+        <script type="text/javascript">    
+            function changeFontSize(size){
+                document.querySelector("body").style.fontSize = size + "rem";
+                sessionStorage.setItem('fontSize', size);
+            
+            let buttons = document.querySelectorAll('[data-fs]');
+                for(let i = buttons.length; i--;){
+                    if(buttons[i].dataset.fs == size){
+                        buttons[i].classList.add("active");
+                    } else{
+                        buttons[i].classList.remove("active");
+                    }
+                }
+            }
+            
+            let size = '1.6';
+                if(sessionStorage.getItem('fontSize')){
+                    size = sessionStorage.getItem('fontSize');
+                }
+                changeFontSize(size);
+                
+            </script>
+
+    </body>
+</html>
