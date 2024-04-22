@@ -1,0 +1,286 @@
+
+/*
+GENERAL STYLING
+================================================ */
+
+
+            
+html{
+    font-size: 62.5%}
+html, body {
+    height: 100%;
+}
+
+body{
+    background-color:#b0e0e6; 
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    font-size: 16px;
+    font-family: Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif;
+}
+
+/*list*/                       
+.nav ul{
+    list-style-type: none; 
+    position: right;
+    text-align: center; 
+}              
+.nav ul li{
+    display: inline-block; 
+    width: 100px; 
+    padding: 5 10; 
+    margin-bottom: 10px; 
+    vertical-align: middle;
+    background: #4169cb; 
+    font-weight: bold; 
+    color: #F5f5dc; 
+    border-radius: 20px;           
+    font-family: 'Avenir', 'Arial'; 
+}                        
+.nav ul li a{
+    text-decoration: none;
+}
+a:link{color:#F5f5dc;}
+a:visited{color: #eee8aa;}
+a:hover{color:white; 
+}
+
+header {
+    height:auto;
+    background-color: white;
+    color:#2f4f4f;
+}    
+
+header h1{
+    margin-top:0;
+    margin-bottom:10px;
+    margin-left:25px;                
+}
+.title {
+    margin-top:30px;
+    margin-left:25px; 
+}
+                            
+.footer{                            
+    margin-top:20px;
+    padding-top: 20px;
+    background-color: white;
+    color: #2f4f4f;
+    text-align: center;
+}
+    .footer div{                    
+        text-shadow: 0.05em 0.05em 0.05em #ffffff;
+        font-style:bold;              
+        gap: 45px;
+        padding-top:20px;
+        padding-bottom: 10x;
+    }
+    
+    #fixed{
+        position: fixed;
+        top: 75%;
+        left:87%;
+        margin:0; 
+    }
+    #fixed img{
+        width: 20%;
+        height: 20%;
+    }
+    .copyright{
+        margin-bottom:0px;
+        padding: bottom 30px;
+    }
+    /*
+top 
+================================================ */
+              
+main {
+    position: relative;
+    margin-bottom: .5rem;
+}          
+.main-text {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+}
+main video {
+    object-fit: cover;
+    object-position: conter top;
+    opacity: var(--video-opacity);
+    width: 100vw;
+    height: 90vh;
+}
+.main-text,
+main video {
+    width: 100vW;
+    height: 90vh;
+}
+
+/*footer*/                            
+
+.top_footer{                    
+    margin-top:20px;
+    padding-top: 20px;
+    background-color: white;
+    color: #2f4f4f;
+    text-align: center;
+}
+
+/*
+profile
+================================================ */    
+
+.pro_main {
+    width: 75%;
+    background-color:white;
+    margin-top:0px;
+    margin-left:30px;
+    margin-bottom:0;
+
+}
+.pro_nav{
+    margin:20px;
+}
+.pro_nav oi{
+    display: inline-block;
+    width:300px;                                
+    color: #2f4f4f;                           
+    font-family: 'Avenir', 'Arial'; 
+    padding:3px;
+    background-color: white;
+    border:dashed 2px skyblue;                                 
+}
+.pro_nav li{
+    list-style-type: none!important;
+}                             
+.pro_nav a:link{
+    color:#2f4f4f;
+}
+.pro_nav a:visited{
+    color: #2f4f4f;
+}
+.pro_nav a:hover{
+    font-style:bold;
+} 
+.pro_nav a{
+    text-decoration: none; /
+}
+.pro_table 
+ h2{
+    margin: 10px 0px 20px 0px; 
+    padding: 20px;
+    background-color: #e6e6fa;
+    border-bottom: solid 3px #b0c4de; 
+    border-left: solid 5px #1e90ff;
+}
+.pro-table
+ table {
+    margin: 40px 40px;
+    height:200;
+    width:90%;
+}
+.pro-table 
+table, td{
+    margin-bottom:20px;
+    padding:10px 10px;
+    border-bottom: dotted skyblue 3px;
+}
+  
+/*
+polytec
+================================================ */
+article {
+    flex: 1;
+}
+.poly_main{
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-attachment: fixed;
+}        
+.poly_main
+ div{
+    width:600px;
+}            
+.poly_anime {
+    display:flex;
+    width:100vw;
+    height:400px;
+}            
+.poly_anime
+ ul{
+    list-style-type: none; 
+    width: auto;
+    height: 250%;
+    display: flex;
+}        
+.poly_anime
+ ul img {
+    width: 400px;
+    height: 250px;}
+
+@keyframes loop1{
+    0%{
+        transform: translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);}
+    }
+@keyframes loop2{
+    0%{
+        transform: translateX(0);
+    }
+    to{
+        transform:translateX(-200%);
+    }
+}
+.poly_anime
+ ul:first-child{
+    animation: loop1 50s -25s linear infinite;
+}
+.poly_anime
+ ul:last-child{
+    animation: loop2 50s linear infinite;
+}
+.poly_anime
+ :hover ul{
+    animation-play-state: paused;
+}
+
+/*
+polytec
+================================================ */
+
+.suiboku_main {
+        margin-top:20px;
+        margin-left:25px;
+        
+        }
+        
+        .item{/*グリッドレイアウト*/
+            margin-top:50px;
+            margin-left:50px;
+            
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        gap: 40px;
+        
+        }
+        .item img{/*イメージのサイズ*/
+        width:50%;
+        height:50%:
+        object-fit: cover;
+        }
+        
+        .item_1 img{/*ピクチャーの位置*/
+        object-position: left 0px bottom 0px;
+        }
+        
+        .item_2 img{/*ピクチャー位置*/
+        object-position: left10px bottom 0px;
+        }
+        
