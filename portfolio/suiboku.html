@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <meta name="description" content="Portfolio">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Portfolio</title>
+
+        <link  rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+        <header>              
+            <h1>This Is My Portfolio Website.</h1>
+                <div class="nav">
+                    <nav>
+                         <ul>
+                            <li><a href="top.html">home</a></li>
+                            <li><a  href="profile.html">profile</a></li>
+                            <li><a href="kunren.html">polytec</a></li>
+                            <li>interest</li>
+                        </ul>
+                    </nav>
+                </div> 
+        </header>
+
+        <main class="suiboku_main">
+            <h2 class="title">趣味</h2>
+                <p>水墨画を書いています。</p>
+                <p>水墨画は戦略性が高いです。<br>
+                    また、自分の体を使って書くこと、書く対象の成り立ちなどを観察したり調べたりすることが楽しいです。
+                </p>
+            
+            <div class="item">
+                <div class="item_2">
+                    <img src="images/s4/p_budou.jpg" alt="シャインマスカット">
+                    <p>習作：シャインマスカット</p>
+                </div>
+
+                <div class="item_1">
+                    <img src="images/s4/p_man.jpg" alt="男性">
+                    <p>習作：男性</p>
+                </div>
+            </div><br>
+            <div class="item">
+                <div class="item_1">
+                    <img src="images/s4/p_ryohu.jpg" alt="涼風">
+                    <p>習作：涼風</p>
+                </div>
+
+                <div class="item_2">
+                    <img src="images/s4/p_koneko.jpg" alt="仔猫">
+                    <p>仔猫</p>
+                </div>
+            </div>
+       
+        </main>
+  
+        <footer class="footer">
+            <div>           
+                <a href="suiboku.html"><button onclick="changeFontSize(2.0)" data-fs="2.1">大</button>
+                <button onclick="changeFontSize(1.6)" data-fs="1.6">中</button>
+                <button onclick="changeFontSize(1.2)" data-fs="1.2">小</button></a>
+            </div>
+
+            <p id="fixed"><a href="suiboku.html">
+                <img src="../sozai1/ペンギン.png" alt="トップボタン"><br>
+                </a>ページトップヘ</p>
+            <p class="copyright"> &copy;hs 2024</p>   
+        </footer>
+
+        <script type="text/javascript">
+                
+            function changeFontSize(size){
+                document.querySelector("body").style.fontSize = size + "rem";
+                sessionStorage.setItem('fontSize', size);
+                
+                let buttons = document.querySelectorAll('[data-fs]');
+                    for(let i = buttons.length; i--;){
+                        if(buttons[i].dataset.fs == size){
+                            buttons[i].classList.add("active");
+                    } else{
+                            buttons[i].classList.remove("active");
+                    }
+                }
+            }
+                
+            let size = '1.6';
+            if(sessionStorage.getItem('fontSize')){
+                size = sessionStorage.getItem('fontSize');
+            }
+            changeFontSize(size);
+
+        </script>        
+
+    </body>
+</html>
