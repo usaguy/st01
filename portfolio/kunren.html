@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <meta name="description" content="Portfolio">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Portfolio</title>
+
+<!--CSS-->
+        <link  rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <article>
+        <header>
+            <h1>This Is My Portfolio Website.</h1>
+
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><a href="top.html">home</a></li>
+                        <li><a  href="profile.html">profile</a></li>
+                        <li>polytec</li>
+                        <li><a href="suiboku.html">interest</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <main class="poly_main">
+
+            <h2 class="title">職業訓練センターで講習中の技術</h2>
+            <P>生産システムエンジニア科のカリキュラム</P>
+
+            <div class="poly_anime">
+                <ul>
+                    <li><img src="images/s3/plc05.jpg" onclick="imgwin('../sozai2/text_kakko_kari.png')"/>ＰＬＣ制御
+                    </li>
+                    <li><img src="images/s3/plc04.jpg" onclick="imgwin('../sozai2/text_kakko_kari.png')"/>(配線の実習)
+                    </li>
+                    <li><img src="images/s3/programing.jpg" onclick="pagewin('noyet.html')" target="_blank" alt="仮です"/>・開発プログラミング・C言語<br>・データベース
+                    </li>
+                    <li><img src="images/s3/java.jpg"/>ウェブページ作成<br>・HTML<br>・CSS<br>・JavaScript
+                    </li>
+                    <li><img src="images/s3/server.jpg"/>ＬＡＮ構築・運用<br>サーバー構築<br>
+                    </li>
+                    <li><img src="images/s3/network.jpg"/>ネットワークシステム構築<br>             
+                    </li>
+                </ul>
+
+                <ul>
+                    <li><img src="images/s3/plc05.jpg" onclick="imgwin('../sozai2/text_kakko_kari.png')"/>ＰＬＣ制御
+                    </li>
+                    <li><img src="images/s3/plc04.jpg" onclick="imgwin('../sozai2/text_kakko_kari.png')"/>(配線の実習)
+                    </li>
+                    <li><img src="images/s3/programing.jpg" onclick="pagewin('noyet.html')" target="_blank" alt="仮です"/>・開発プログラミング・C言語<br>・データベース
+                    </li>
+                    <li><img src="images/s3/java.jpg"/>ウェブページ作成<br>・HTML<br>・CSS<br>・JavaScript
+                    </li>
+                    <li><img src="images/s3/server.jpg"/>ＬＡＮ構築・運用<br>サーバー構築<br>
+                    </li>
+                    <li><img src="images/s3/network.jpg"/>ネットワークシステム構築<br>             
+                    </li>
+                </ul>
+            </div>
+       
+        </main>
+    </article>
+        <footer class="footer">
+                
+            <div>           
+                <a href="kunren.html"><button onclick="changeFontSize(2.0)" data-fs="2.1">大</button>
+                <button onclick="changeFontSize(1.6)" data-fs="1.6">中</button>
+                <button onclick="changeFontSize(1.2)" data-fs="1.2">小</button></a>
+            </div>
+
+            <p class="copyright"> &copy;hs 2024</p>
+            
+        </footer>
+
+        <script type="text/javascript">
+                
+                function changeFontSize(size){
+                    document.querySelector("body").style.fontSize = size + "rem";
+                    sessionStorage.setItem('fontSize', size);
+                    
+                    let buttons = document.querySelectorAll('[data-fs]');
+                        for(let i = buttons.length; i--;){
+                            if(buttons[i].dataset.fs == size){
+                                buttons[i].classList.add("active");
+                        } else{
+                                buttons[i].classList.remove("active");
+                        }
+                    }
+                }
+                    
+                let size = '1.6';
+                if(sessionStorage.getItem('fontSize')){
+                    size = sessionStorage.getItem('fontSize');
+                }
+                changeFontSize(size);
+
+            </script>        
+
+    </body>
+</html>
