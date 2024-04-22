@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <meta name="description" content="Portfolio">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>profile</title>
+
+      
+        <link  rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>            
+        <h1>This Is My Portfolio Website.</h1>
+    
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a  href="top.html">home</a></li>
+                    <li>profile</li>
+                    <li><a href="kunren.html">polytec</a></li>
+                    <li><a href="suiboku.html">interest</a></li>
+                </ul></nav>
+        </div>
+    </header>
+
+    <main class="pro_main">
+        <div  class="pro_nav">
+            <h4 class="title">自己紹介</h4><br>
+            <oi>
+                <li><a href="#section1">学歴</a></li>
+                <li><a href="#section2">職歴</a></li>
+                <li><a href="#section3">資格</a></li>
+                <li><a href="#section4">その他</a></li>
+            </oi>
+        </div>
+
+        <div class="pro_table">
+            <h2 class="title">学歴</h2>
+
+            <table>
+                <tr><td>長野県北信地域に生まれる。地元の普通科高校を卒業。</td><td></td></tr>
+                <tr><td>長野県農業大学校指導学部生活指導学科卒業。</td><td>生活指導に関すること</td></tr>
+                <tr><td>ポリテクセンター機械加工科修了。</td><td>NC旋盤、マシニングセンサ、CAD等</td></tr>
+                <tr><td>長野県須坂看護専門学校３年課程卒業(正看護師)</td><td></td></tr>
+                <tr><td>R6年1月から、ポリテクセンター生産システムエンジニア科受講中</td><td></td>
+                </tr>
+            </table>
+
+            <h2>職歴</h2>
+            <table>
+                <tr>
+                    <td>農薬の研究所</td><td>農薬の安全性試験<br>実験動物の飼育管理<br>・データ収集・解析,報告書等文書作成</td>
+                        <td>(正)４年半<br>windows-word,exel,access</td></tr>
+                    <tr><td>工業部品図などのイラスト作成会社</td><td>テクニカルイラストレーション</td>
+                        <td>(アルバイト)半年<br>                                                                          mac-Illustrator(Adbe)</td></tr>
+                    <tr><td>建築リフォーム業</td><td>営業事務<br>原価管理,書類作成,接客・電話対応</td><td>(正)６年</td></tr>
+                    <tr><td>総合病院</td><td>看護師として病棟勤務<br>循環器脳外科整形外科</td><td>(正)２年半</td></tr>
+                    <tr><td>障がい者福祉施設</td><td>利用者の健康増進に関する相談業務<br>職場のメンタルヘルス</td><td>(臨・正)１０年</td>
+                </tr>
+            </table>
+
+            <h2>資格等</h2>
+            <table>
+                <tr><td>普通自動車第一種免許　取得</td></tr>
+                <tr><td>一般毒物劇物取扱者　修了</td></tr>
+                <tr><td>正看護師免許　取得</td></tr>
+                <tr><td>ストレスチェック実施者　修了</td></tr>
+                <tr><td>↓</td></tr>
+                <tr><td>今後、取得に向けて準備中</td></tr>
+                <tr><td>ITパスポート</td></td>
+                </tr>
+            </table>
+
+            <h2>その他</h2>
+            <p>ボランティア：アジアを対象とした、子どもたちへの教育・交流支援活動</p>
+
+        </div>
+    </main>
+  
+    <footer class="footer">
+        
+        <div><!--文字サイズ変更-->           
+            <a href="profile.html"><button onclick="changeFontSize(2.0)" data-fs="2.1">大</button>
+            <button onclick="changeFontSize(1.6)" data-fs="1.6">中</button>
+            <button onclick="changeFontSize(1.2)" data-fs="1.2">小</button></a>
+        </div>
+                
+        <p id="fixed"><a href="profile.html">
+        <img src="../sozai1/ペンギン.png" alt="トップボタン"><br>
+        </a>ページトップヘ</p>
+
+        <p class="copyright"> &copy;hs 2024</p>
+            
+    </footer>
+
+    <script type="text/javascript">
+                
+        function changeFontSize(size){
+            document.querySelector("body").style.fontSize = size + "rem";
+            sessionStorage.setItem('fontSize', size);
+            
+            let buttons = document.querySelectorAll('[data-fs]');
+                for(let i = buttons.length; i--;){
+                    if(buttons[i].dataset.fs == size){
+                        buttons[i].classList.add("active");
+                } else{
+                        buttons[i].classList.remove("active");
+                }
+            }
+        }
+            
+        let size = '1.6';
+        if(sessionStorage.getItem('fontSize')){
+            size = sessionStorage.getItem('fontSize');
+        }
+        changeFontSize(size);
+                
+    </script>
+
+    </body>
+</html>
