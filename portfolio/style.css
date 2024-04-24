@@ -152,28 +152,37 @@ profile
 .pro_nav{
     margin:20px;
 }
-.pro_nav oi{
+#pro_list {
+    
+        background: #efefef;
+        padding: 2.5rem;
+        max-width: 400px;
+        margin: 2rem auto;
+        border-radius: 15rem 1rem 8rem 1em / 1rem 12rem 1rem 12rem;
+        border: 2px dashed skyblue;
+    
+    
     display: inline-block;
-    width:300px;                                
+    width:300px;*/                                
     color: #2f4f4f;                           
     font-family: 'Avenir', 'Arial'; 
-    padding:3px;
+    /*padding:3px;
     background-color: white;
-    border:dashed 2px skyblue;                                 
+    border:dashed 2px skyblue; */                                 
 }
-.pro_nav li{
+#pro_list li{
     list-style-type: none!important;
 }                             
-.pro_nav a:link{
+#pro_list a:link{
     color:#2f4f4f;
 }
-.pro_nav a:visited{
+#pro_list a:visited{
     color: #2f4f4f;
 }
-.pro_nav a:hover{
+#pro_list a:hover{
     font-style:bold;
 } 
-.pro_nav a{
+#pro_list a{
     text-decoration: none; /
 }
 .pro_table 
