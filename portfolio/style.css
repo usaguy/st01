@@ -108,6 +108,12 @@ main {
     align-items: center;  
     text-align: center;
 }
+.main-name {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 main video {
     object-fit: cover;
     object-position: conter top;
