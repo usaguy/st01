@@ -101,7 +101,7 @@ main {
 }          
 .main-text {
     position: absolute;
-    top: 40px;
+    top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
